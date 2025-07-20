@@ -62,7 +62,7 @@ footer {
 main {
   flex: 1;
   padding: 2em 0;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   width: 100%;
 }
@@ -111,8 +111,12 @@ nav a:hover, nav a:focus {
   background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
-  padding: 2em;
+  padding: 1.2em 1em;
   margin-bottom: 2em;
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .about-section {
@@ -193,6 +197,127 @@ nav a:hover, nav a:focus {
   z-index: 2;
 }
 
+/* Promise list styling */
+.promise-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2em 0 0 0;
+}
+
+.promise-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7em;
+  margin-bottom: 1.1em;
+  line-height: 1.6;
+  background: rgba(25, 118, 210, 0.04);
+  border-radius: 6px;
+  padding: 0.7em 0.9em;
+}
+
+.promise-icon {
+  font-size: 1.3em;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.promise-list strong {
+  min-width: 170px;           /* Adjust width as needed */
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-right: 0.5em;
+}
+
+.promise-list li {
+  /* Already flex, but let's clarify the structure */
+}
+
+.promise-list li > strong + span,
+.promise-list li > strong + br,
+.promise-list li > strong + text {
+  /* No extra styling needed, just for clarity */
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2em 0 0 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;      /* Center icon and text vertically */
+  gap: 0.7em;
+  margin-bottom: 1.1em;
+  line-height: 1.6;
+  background: rgba(25, 118, 210, 0.04);
+  border-radius: 6px;
+  padding: 0.7em 0.9em;
+}
+
+.contact-icon {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;      /* Center icon images vertically */
+  justify-content: center;
+  min-width: 1.8em;         /* Ensures consistent spacing for all icons */
+}
+
+.contact-icon img {
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+}
+
+.contact-list strong {
+  min-width: 110px;
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-right: 0.5em;
+}
+
+.contact-list a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+.about-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.about-quote {
+  font-size: 1.1em;
+  color: var(--primary-dark);
+  margin: 0 0 1em 0;
+  font-style: italic;
+  text-align: left;
+}
+
+.about-highlight {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.about-section p {
+  line-height: 1.8;
+  margin-bottom: 1em;
+  font-size: 1.08em;
+}
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
@@ -212,5 +337,12 @@ nav a:hover, nav a:focus {
   .gallery img {
     width: 100px;
     height: 70px;
+  }
+  .card {
+    padding: 1em 0.5em;
+  }
+  .promise-list li {
+    font-size: 1em;
+    padding: 0.6em 0.5em;
   }
 }
