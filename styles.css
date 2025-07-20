@@ -318,6 +318,10 @@ nav a:hover, nav a:focus {
   font-size: 1.08em;
 }
 
+body, main, .card {
+  box-sizing: border-box;
+}
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
